@@ -18,9 +18,9 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Install Chrome
-      run:
-       sudo apt update
-       sudo apt install google-chrome-stable
+      uses: browser-actions/setup-chrome@v1
+      with:
+       chrome-version: 120
     - name: Install dependencies
       run: dontnet restore
     - name: Build
