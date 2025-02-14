@@ -22,7 +22,7 @@ jobs:
       with:
        chrome-version: 120
     - name: Install dependencies
-      run: dontnet restore
+      run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
     - name: Run tests
